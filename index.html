@@ -5,24 +5,26 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Maze</title>
-    <link rel="stylesheet" href="style.css">
+    <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet">
+</head>
 </head>
 
 <body>
-    <div class="container">
-        <div>
-            <h1 class="title">Welcome To The Maze!</h1>
+    <div class="container grid grid-rows-3 gap-1 md:w-full" style="grid-template-rows: 1fr 6fr 1fr;">
+        <div class=" flex justify-center items-center font-bold text-xl h-auto">
+            <h1>Welcome To The Maze!</h1>
+
 
         </div>
 
-        <div class="second-row">
-            <div class="legend">
-                <div class="legend-item">
-                    <div class="cell red"></div>
-                    <span>Start</span>
+        <div class="second-row grid grid-cols-2  " style="grid-template-columns: 2fr 4fr;">
+            <div class="legend  flex flex-col items-end mr-5">
+                <div class="legend-item flex items-center mb-2 ">
+                    <div class="cell-red w-5 h-5 border bg-red-500 mr-2"></div>
+                    <span class="text-right">Start</span>
                 </div>
-                <div class="legend-item">
-                    <div class="cell green"></div>
+                <div class="legend-item flex items-center ">
+                    <div class="cell-green w-5 h-5 border mr-2 bg-green-800"></div>
                     <span>Exit</span>
                 </div>
 
@@ -30,8 +32,10 @@
             <canvas class="maze"></canvas>
         </div>
 
-        <div>
-            <button onclick="initMaze()">Click me!</button>
+        <div class="flex justify-center items-center">
+            <button class="bg-blue-500 hover:bg-blue-700 text-white font-bold py-2 px-4 rounded" onclick="initMaze()">
+                Generate!
+            </button>
 
         </div>
 

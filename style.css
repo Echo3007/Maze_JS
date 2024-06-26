@@ -1,4 +1,4 @@
-body,
+/*body,
 html {
     height: 100%;
     margin: 0;
@@ -15,6 +15,7 @@ html {
     gap: 10px;
     width: 100%;
     max-width: 800px;
+    box-sizing: border-box;
 
 }
 
@@ -64,5 +65,11 @@ button {
     background-color: aqua;
     font-size: 20pt;
     font-weight: bold;
-    align-items: center;
 }
+
+.maze {
+    width: 100%;
+    height: 100%;
+    display: block;
+    box-sizing: border-box;
+}*/

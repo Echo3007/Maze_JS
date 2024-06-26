@@ -38,7 +38,7 @@ class Maze {
     draw() {
         maze.width = this.size;
         maze.height = this.size;
-        maze.style.background = "black";
+        maze.style.background = "white";
         current.visited = true;
 
         for (let r = 0; r < this.rows; r++) {
@@ -182,8 +182,8 @@ class Cell {
         let x = (this.colNum * size) / columns;
         let y = (this.rowNum * size) / rows;
 
-        ctx.strokeStyle = "white";
-        ctx.fillStyle = "black";
+        ctx.strokeStyle = "black";
+        ctx.fillStyle = "white";
         ctx.lineWidth = 2;
 
         if (this.walls.topWall) this.drawTopWall(x, y, size, columns, rows);
@@ -209,7 +209,7 @@ class Cell {
 let newMaze;
 
 function initMaze() {
-    newMaze = new Maze(500, 10, 10);
+    newMaze = new Maze(500, 12, 12);
     newMaze.setup();
     newMaze.draw();
 }
